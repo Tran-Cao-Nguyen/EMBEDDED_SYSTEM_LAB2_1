@@ -87,6 +87,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+  int count = 6;
 
   /* USER CODE END 2 */
 
@@ -94,10 +95,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 0);
-	  HAL_Delay(2000);
-	  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
-	  HAL_Delay(4000);
+	  if(count == 6){
+		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 0);
+	  }
+	  else if(count == 4)
+	  {
+		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
+	  }
+	  count--;
+
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
