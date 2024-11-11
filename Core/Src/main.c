@@ -96,11 +96,11 @@ int main(void)
   while (1)
   {
 	  if(count == 6){
-		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 0);
+		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
 	  }
 	  else if(count == 4)
 	  {
-		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
+		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 0);
 	  }
 	  count--;
 	  if(count == 0)
