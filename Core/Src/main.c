@@ -103,6 +103,10 @@ int main(void)
 		  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
 	  }
 	  count--;
+	  if(count == 0)
+	  {
+		  count = 6;
+	  }
 
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
